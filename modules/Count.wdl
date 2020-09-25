@@ -54,9 +54,10 @@ task Count {
         done
 
         # generate libraries.csv
+        # fastq folder must be an absolute path
         echo "fastqs,sample,library_type" > libraries.csv
-        echo "./fastq-gex,~{gexFastqName},Gene Expression" >> libraries.csv
-        echo "./fastq-atac,~{atacFastqName},Chromatin Accessibility" >> libraries.csv
+        echo "$(pwd)/fastq-gex,~{gexFastqName},Gene Expression" >> libraries.csv
+        echo "$(pwd)/fastq-atac,~{atacFastqName},Chromatin Accessibility" >> libraries.csv
         cat libraries.csv
 
         # run the count pipeline
