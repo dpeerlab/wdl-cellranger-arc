@@ -1,0 +1,9 @@
+{
+    "pipelineType": "CellRangerARC",
+    "project": "Project 123",
+    "sample": "S316",
+    "owner": "chunj",
+    "destination": "gs://chunj-cromwell/outputs/ARC",
+    "transfer": "-",
+    "comment": "ARC"
+}
