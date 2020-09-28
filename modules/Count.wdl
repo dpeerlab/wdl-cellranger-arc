@@ -81,7 +81,7 @@ task Count {
     output {
         File webSummary = outBase + "/web_summary.html"
 
-        File metricsSummary = outBase + "/metrics_summary.csv"
+        File metricsSummary = outBase + "/summary.csv"
 
         File gexBam = outBase + "/gex_possorted_bam.bam"
         File gexBai = outBase + "/gex_possorted_bam.bam.bai"
