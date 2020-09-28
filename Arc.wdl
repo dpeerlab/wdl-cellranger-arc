@@ -23,4 +23,36 @@ workflow Arc {
             reference = reference
     }
 
+    output {
+        File webSummary = Count.webSummary
+
+        File metricsSummary = Count.metricsSummary
+
+        File gexBam = Count.gexBam
+        File gexBai = Count.gexBai
+
+        File atacBam = Count.atacBam
+        File atacBai = Count.atacBai
+
+        Array[File] hdf5 = Count.hdf5
+
+        File atacFragments = Count.atacFragments
+        File atacFragmentsIndex = Count.atacFragmentsIndex
+
+        Array[File] rawFeatureBCMatrix = Count.rawFeatureBCMatrix
+        Array[File] filteredFeatureBCMatrix = Count.filteredFeatureBCMatrix
+
+        File? outAnalysis = Count.outAnalysis
+
+        File perBarcodeMetrics = Count.perBarcodeMetrics
+        File peaks = Count.peaks
+        File cutSites = Count.cutSites
+        File peakAnnotation = Count.peakAnnotation
+
+        File cloupe = Count.cloupe
+
+        File pipestance = Count.pipestance
+
+        File debugFile = Count.debugFile
+    }
 }
