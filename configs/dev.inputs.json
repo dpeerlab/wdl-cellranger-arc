@@ -1,14 +1,19 @@
 {
-    "Arc.sampleName": "PBMC_multiome",
-    "Arc.gexFastqName": "sample-gex",
+    "Arc.sampleName": "PBMC-pilot",
+    "Arc.gexFastqName": "PBMC_multiome_IGO_11238_3",
     "Arc.gexFastqFiles": [
-        "s3://dp-lab-data/SCRI_Projects/HTA/HTA/Ru263/seqc-results/Ru263_alignment_summary.txt",
-        "s3://dp-lab-data/SCRI_Projects/HTA/HTA/Ru263/seqc-results/Ru263_de_gene_list.txt"
+        "s3://dp-lab-data/sc-seq/Multiome_11239/RNA/Sample_PBMC_multiome_IGO_11238_3/PBMC_multiome_IGO_11238_3_S3_L001_I1_001.fastq.gz",
+        "s3://dp-lab-data/sc-seq/Multiome_11239/RNA/Sample_PBMC_multiome_IGO_11238_3/PBMC_multiome_IGO_11238_3_S3_L001_I2_001.fastq.gz",
+        "s3://dp-lab-data/sc-seq/Multiome_11239/RNA/Sample_PBMC_multiome_IGO_11238_3/PBMC_multiome_IGO_11238_3_S3_L001_R1_001.fastq.gz",
+        "s3://dp-lab-data/sc-seq/Multiome_11239/RNA/Sample_PBMC_multiome_IGO_11238_3/PBMC_multiome_IGO_11238_3_S3_L001_R2_001.fastq.gz"
     ],
-    "Arc.atacFastqName": "sample-atac",
+    "Arc.atacFastqName": "PBMC_multiome_ATAC_IGO_11239_4",
     "Arc.atacFastqFiles": [
-        "s3://dp-lab-data/SCRI_Projects/HTA/HTA/Ru263/seqc-results/Ru263_cell_filters.png",
-        "s3://dp-lab-data/SCRI_Projects/HTA/HTA/Ru263/seqc-results/Ru263_seqc_log.txt"
+        "s3://dp-lab-data/sc-seq/Multiome_11239/ATAC/Sample_PBMC_multiome_ATAC_IGO_11239_4/PBMC_multiome_ATAC_IGO_11239_4_S4_L001_I1_001.fastq.gz",
+        "s3://dp-lab-data/sc-seq/Multiome_11239/ATAC/Sample_PBMC_multiome_ATAC_IGO_11239_4/PBMC_multiome_ATAC_IGO_11239_4_S4_L001_R1_001.fastq.gz",
+        "s3://dp-lab-data/sc-seq/Multiome_11239/ATAC/Sample_PBMC_multiome_ATAC_IGO_11239_4/PBMC_multiome_ATAC_IGO_11239_4_S4_L001_R2_001.fastq.gz",
+        "s3://dp-lab-data/sc-seq/Multiome_11239/ATAC/Sample_PBMC_multiome_ATAC_IGO_11239_4/PBMC_multiome_ATAC_IGO_11239_4_S4_L001_R3_001.fastq.gz"
     ],
-    "Arc.reference": "https://cf.10xgenomics.com/supp/cell-arc/refdata-cellranger-arc-GRCh38-2020-A.tar.gz"
+    "Arc.reference": "https://cf.10xgenomics.com/supp/cell-arc/refdata-cellranger-arc-GRCh38-2020-A-2.0.0.tar.gz",
+    "Arc.dockerRegistry": "hisplan"
 }
