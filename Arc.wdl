@@ -11,6 +11,9 @@ workflow Arc {
         Array[File] gexFastqFiles
         Array[File] atacFastqFiles
         String reference
+
+        # docker-related
+        String dockerRegistry
     }
 
     call Count.Count {
@@ -20,13 +23,16 @@ workflow Arc {
             atacFastqName = atacFastqName,
             gexFastqFiles = gexFastqFiles,
             atacFastqFiles = atacFastqFiles,
-            reference = reference
+            reference = reference,
+            dockerRegistry = dockerRegistry
     }
 
     output {
-        File webSummary = Count.webSummary
+        File libraries = Count.libraries
 
+        File webSummary = Count.webSummary
         File metricsSummary = Count.metricsSummary
+        File gexPerMoleculeInfo = Count.gexPerMoleculeInfo
 
         File gexBam = Count.gexBam
         File gexBai = Count.gexBai
@@ -34,13 +40,14 @@ workflow Arc {
         File atacBam = Count.atacBam
         File atacBai = Count.atacBai
 
-        Array[File] hdf5 = Count.hdf5
-
         File atacFragments = Count.atacFragments
         File atacFragmentsIndex = Count.atacFragmentsIndex
 
         Array[File] rawFeatureBCMatrix = Count.rawFeatureBCMatrix
+        File rawFeatureBCMatrixH5 = Count.rawFeatureBCMatrixH5
+
         Array[File] filteredFeatureBCMatrix = Count.filteredFeatureBCMatrix
+        File filteredFeatureBCMatrixH5 = Count.filteredFeatureBCMatrixH5
 
         File? outAnalysis = Count.outAnalysis
 

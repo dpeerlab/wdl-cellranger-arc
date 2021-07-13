@@ -9,11 +9,16 @@ task Count {
         Array[File] gexFastqFiles
         Array[File] atacFastqFiles
         String reference
+
+        # docker-related
+        String dockerRegistry
     }
 
-    String cellRangerVersion = "1.0.0"
-    String dockerImage = "hisplan/cellranger-arc:" + cellRangerVersion
+    String cellRangerVersion = "2.0.0"
+    String dockerImage = dockerRegistry + "/cromwell-cellranger-arc:" + cellRangerVersion
     Float inputSize = size(gexFastqFiles, "GiB") + size(atacFastqFiles, "GiB") + 20
+    Int cores = 32
+    Int memoryGB = 256
 
     # ~{sampleName} : the top-level output directory containing pipeline metadata
     # ~{sampleName}/outs/ : contains the final pipeline output files.
@@ -25,11 +30,6 @@ task Count {
         export MRO_DISK_SPACE_CHECK=disable
 
         # download reference
-        # curl -OL https://cf.10xgenomics.com/supp/cell-arc/refdata-cellranger-arc-GRCh38-2020-A.tar.gz
-        # mv refdata-cellranger-arc-GRCh38-2020-A.tar.gz /opt/
-        # tar xvzf /opt/refdata-cellranger-arc-GRCh38-2020-A.tar.gz
-        # rm -rf /opt/refdata-cellranger-arc-GRCh38-2020-A.tar.gz
-
         curl -L --silent -o reference.tgz ~{reference}
         mkdir -p reference
         tar xvzf reference.tgz -C reference --strip-components=1
@@ -38,20 +38,13 @@ task Count {
 
         find .
 
-        mkdir -p fastq-gex
-        mkdir -p fastq-atac
-
         # aggregate all the GEX fastq files into a single directory
-        for file in "~{sep=' ' gexFastqFiles}"
-        do
-            mv -v ${file} ./fastq-gex/
-        done
+        mkdir -p fastq-gex
+        mv -v ~{sep=' ' gexFastqFiles} ./fastq-gex/
 
         # aggregate all the ATAC fastq files into a single directory
-        for file in "~{sep=' ' atacFastqFiles}"
-        do
-            mv -v ${file} ./fastq-atac/
-        done
+        mkdir -p fastq-atac
+        mv -v ~{sep=' ' atacFastqFiles} ./fastq-atac/
 
         # generate libraries.csv
         # fastq folder must be an absolute path
@@ -65,8 +58,8 @@ task Count {
             --id=~{sampleName} \
             --reference=./reference/ \
             --libraries=./libraries.csv \
-            --localcores=16 \
-            --localmem=115
+            --localcores=~{cores - 1} \
+            --localmem=~{memoryGB - 5}
 
         # targz the analysis folder and pipestance metadata if successful
         if [ $? -eq 0 ]
@@ -79,9 +72,11 @@ task Count {
     >>>
 
     output {
-        File webSummary = outBase + "/web_summary.html"
+        File libraries = "libraries.csv"
 
+        File webSummary = outBase + "/web_summary.html"
         File metricsSummary = outBase + "/summary.csv"
+        File gexPerMoleculeInfo = outBase + "/gex_molecule_info.h5"
 
         File gexBam = outBase + "/gex_possorted_bam.bam"
         File gexBai = outBase + "/gex_possorted_bam.bam.bai"
@@ -89,13 +84,14 @@ task Count {
         File atacBam = outBase + "/atac_possorted_bam.bam"
         File atacBai = outBase + "/atac_possorted_bam.bam.bai"
 
-        Array[File] hdf5 = glob(outBase + "/*.h5")
-
         File atacFragments = outBase + "/atac_fragments.tsv.gz"
         File atacFragmentsIndex = outBase + "/atac_fragments.tsv.gz.tbi"
 
         Array[File] rawFeatureBCMatrix = glob(outBase + "/raw_feature_bc_matrix/*")
+        File rawFeatureBCMatrixH5 = outBase + "raw_feature_bc_matrix.h5"
+
         Array[File] filteredFeatureBCMatrix = glob(outBase + "/filtered_feature_bc_matrix/*")
+        File filteredFeatureBCMatrixH5 = outBase + "/filtered_feature_bc_matrix.h5"
 
         File? outAnalysis = outBase + "/analysis.tgz"
 
@@ -127,8 +123,8 @@ task Count {
 
     runtime {
         docker: dockerImage
-        # disks: "local-disk 1500 SSD"
-        cpu: 16
-        memory: "128 GB"
+        disks: "local-disk " + ceil(2 * (if inputSize < 1 then 100 else inputSize )) + " HDD"
+        cpu: cores
+        memory: memoryGB + " GB"
     }
 }
