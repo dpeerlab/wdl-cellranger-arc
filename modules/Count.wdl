@@ -36,8 +36,6 @@ task Count {
         chmod -R +r reference
         rm -rf reference.tgz
 
-        find .
-
         # aggregate all the GEX fastq files into a single directory
         mkdir -p fastq-gex
         mv -v ~{sep=' ' gexFastqFiles} ./fastq-gex/
@@ -68,7 +66,7 @@ task Count {
             tar czf debug.tgz ./~{sampleName}/_*
         fi
 
-        find .
+        find ~{outBase}
     >>>
 
     output {
@@ -88,7 +86,7 @@ task Count {
         File atacFragmentsIndex = outBase + "/atac_fragments.tsv.gz.tbi"
 
         Array[File] rawFeatureBCMatrix = glob(outBase + "/raw_feature_bc_matrix/*")
-        File rawFeatureBCMatrixH5 = outBase + "raw_feature_bc_matrix.h5"
+        File rawFeatureBCMatrixH5 = outBase + "/raw_feature_bc_matrix.h5"
 
         Array[File] filteredFeatureBCMatrix = glob(outBase + "/filtered_feature_bc_matrix/*")
         File filteredFeatureBCMatrixH5 = outBase + "/filtered_feature_bc_matrix.h5"
