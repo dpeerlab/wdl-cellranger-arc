@@ -59,11 +59,10 @@ task Count {
             --localcores=~{cores - 1} \
             --localmem=~{memoryGB - 5}
 
-        # targz the analysis folder and pipestance metadata if successful
+        # targz the analysis folder if successful
         if [ $? -eq 0 ]
         then
             tar czf ~{outBase}/analysis.tgz ~{outBase}/analysis/*
-            tar czf debug.tgz ./~{sampleName}/_*
         fi
 
         find ~{outBase}
@@ -91,7 +90,7 @@ task Count {
         Array[File] filteredFeatureBCMatrix = glob(outBase + "/filtered_feature_bc_matrix/*")
         File filteredFeatureBCMatrixH5 = outBase + "/filtered_feature_bc_matrix.h5"
 
-        File? outAnalysis = outBase + "/analysis.tgz"
+        File? secondaryAnalysis = outBase + "/analysis.tgz"
 
         File perBarcodeMetrics = outBase + "/per_barcode_metrics.csv"
         File peaks = outBase + "/atac_peaks.bed"
@@ -100,23 +99,7 @@ task Count {
 
         File cloupe = outBase + "/cloupe.cloupe"
 
-        File pipestance = sampleName + "/" + sampleName + ".mri.tgz"
-
-        File debugFile = "debug.tgz"
-        # ./${sample-name}/_invocation
-        # ./${sample-name}/_jobmode
-        # ./${sample-name}/_mrosource
-        # ./${sample-name}/_versions
-        # ./${sample-name}/_tags
-        # ./${sample-name}/_uuid
-        # ./${sample-name}/_timestamp
-        # ./${sample-name}/_log
-        # ./${sample-name}/_vdrkill
-        # ./${sample-name}/_perf
-        # ./${sample-name}/_finalstate
-        # ./${sample-name}/_cmdline
-        # ./${sample-name}/_sitecheck
-        # ./${sample-name}/_filelist
+        File pipestanceMeta = sampleName + "/" + sampleName + ".mri.tgz"
     }
 
     runtime {

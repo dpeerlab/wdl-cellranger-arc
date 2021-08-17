@@ -49,7 +49,7 @@ workflow Count {
         Array[File] filteredFeatureBCMatrix = Count.filteredFeatureBCMatrix
         File filteredFeatureBCMatrixH5 = Count.filteredFeatureBCMatrixH5
 
-        File? outAnalysis = Count.outAnalysis
+        File? secondaryAnalysis = Count.secondaryAnalysis
 
         File perBarcodeMetrics = Count.perBarcodeMetrics
         File peaks = Count.peaks
@@ -58,8 +58,6 @@ workflow Count {
 
         File cloupe = Count.cloupe
 
-        File pipestance = Count.pipestance
-
-        File debugFile = Count.debugFile        
+        File pipestanceMeta = Count.pipestanceMeta
     }
 }
