@@ -15,5 +15,5 @@
         "s3://dp-lab-data/sc-seq/Multiome_11239/ATAC/Sample_PBMC_multiome_ATAC_IGO_11239_4/PBMC_multiome_ATAC_IGO_11239_4_S4_L001_R3_001.fastq.gz"
     ],
     "Count.reference": "https://cf.10xgenomics.com/supp/cell-arc/refdata-cellranger-arc-GRCh38-2020-A-2.0.0.tar.gz",
-    "Count.dockerRegistry": "hisplan"
+    "Count.dockerRegistry": "quay.io/hisplan"
 }
