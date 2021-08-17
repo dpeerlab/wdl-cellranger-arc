@@ -7,10 +7,10 @@
 
 ```
 ./submit.sh \
-    -k ~/keys/secrets-aws.json \
-    -i configs/PDAC-DACE437LUNG.inputs.json \
-    -l configs/PDAC-DACE437LUNG.labels.aws.json \
-    -o Arc.options.aws.json
+    -k ~/keys/cromwell-secrets-aws-nvirginia.json \
+    -i configs/dev.inputs.json \
+    -l configs/dev.labels.aws.json \
+    -o CellRangerArc.options.aws.json
 ```
 
 ## Genome
