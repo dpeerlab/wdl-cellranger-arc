@@ -31,8 +31,8 @@ fi
 
 cromwell-tools submit \
     --secrets-file ${service_account_key} \
-    --wdl Arc.wdl \
+    --wdl CellRangerArc.wdl \
     --inputs-files ${inputs_file} \
-    --deps-file Arc.deps.zip \
+    --deps-file CellRangerArc.deps.zip \
     --label-file ${labels_file} \
     --options-file ${options_file}

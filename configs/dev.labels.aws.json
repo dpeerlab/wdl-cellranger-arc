@@ -1,9 +1,9 @@
 {
     "pipelineType": "CellRangerARC",
-    "project": "Multiome Pilot",
-    "sample": "PBMC_multiome",
+    "project": "DEV/TEST",
+    "sample": "devtest",
     "owner": "chunj",
-    "destination": "s3://dp-lab-batch/outputs/ARC",
-    "transfer": "skip",
+    "destination": "s3://dp-lab-test/cellranger-arc/cr-arc-results/",
+    "transfer": "-",
     "comment": "DEV/TEST"
 }

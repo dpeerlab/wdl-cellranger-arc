@@ -32,5 +32,5 @@ cromwell-tools submit \
     --secrets-file ${service_account_key} \
     --wdl test.${module_name}.wdl \
     --inputs-files test.${module_name}.inputs.json \
-    --deps-file ../Arc.deps.zip \
+    --deps-file ../CellRangerArc.deps.zip \
     --label-file test.labels.json

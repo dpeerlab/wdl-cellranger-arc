@@ -2,5 +2,5 @@
 
 java -jar ~/Applications/womtool.jar \
     validate \
-    Arc.wdl \
+    CellRangerArc.wdl \
     --inputs ./configs/dev.inputs.json

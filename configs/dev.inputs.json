@@ -1,19 +1,19 @@
 {
-    "Arc.sampleName": "PBMC-pilot",
-    "Arc.gexFastqName": "PBMC_multiome_IGO_11238_3",
-    "Arc.gexFastqFiles": [
-        "s3://dp-lab-data/sc-seq/Multiome_11239/RNA/Sample_PBMC_multiome_IGO_11238_3/PBMC_multiome_IGO_11238_3_S3_L001_I1_001.fastq.gz",
-        "s3://dp-lab-data/sc-seq/Multiome_11239/RNA/Sample_PBMC_multiome_IGO_11238_3/PBMC_multiome_IGO_11238_3_S3_L001_I2_001.fastq.gz",
-        "s3://dp-lab-data/sc-seq/Multiome_11239/RNA/Sample_PBMC_multiome_IGO_11238_3/PBMC_multiome_IGO_11238_3_S3_L001_R1_001.fastq.gz",
-        "s3://dp-lab-data/sc-seq/Multiome_11239/RNA/Sample_PBMC_multiome_IGO_11238_3/PBMC_multiome_IGO_11238_3_S3_L001_R2_001.fastq.gz"
+    "CellRangerArc.sampleName": "devtest",
+    "CellRangerArc.gexFastqName": "2739_DACE657_mKate2_multiome_IGO_12109_1",
+    "CellRangerArc.gexFastqFiles": [
+        "s3://dp-lab-data/collaborators/lowe/PDAC-GEMMs/DACE657_mKate2_multiome/FASTQ/2739_DACE657_mKate2_multiome_IGO_12109_1_S10_L001_I1_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/lowe/PDAC-GEMMs/DACE657_mKate2_multiome/FASTQ/2739_DACE657_mKate2_multiome_IGO_12109_1_S10_L001_I2_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/lowe/PDAC-GEMMs/DACE657_mKate2_multiome/FASTQ/2739_DACE657_mKate2_multiome_IGO_12109_1_S10_L001_R1_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/lowe/PDAC-GEMMs/DACE657_mKate2_multiome/FASTQ/2739_DACE657_mKate2_multiome_IGO_12109_1_S10_L001_R2_001.fastq.gz",
     ],
-    "Arc.atacFastqName": "PBMC_multiome_ATAC_IGO_11239_4",
-    "Arc.atacFastqFiles": [
-        "s3://dp-lab-data/sc-seq/Multiome_11239/ATAC/Sample_PBMC_multiome_ATAC_IGO_11239_4/PBMC_multiome_ATAC_IGO_11239_4_S4_L001_I1_001.fastq.gz",
-        "s3://dp-lab-data/sc-seq/Multiome_11239/ATAC/Sample_PBMC_multiome_ATAC_IGO_11239_4/PBMC_multiome_ATAC_IGO_11239_4_S4_L001_R1_001.fastq.gz",
-        "s3://dp-lab-data/sc-seq/Multiome_11239/ATAC/Sample_PBMC_multiome_ATAC_IGO_11239_4/PBMC_multiome_ATAC_IGO_11239_4_S4_L001_R2_001.fastq.gz",
-        "s3://dp-lab-data/sc-seq/Multiome_11239/ATAC/Sample_PBMC_multiome_ATAC_IGO_11239_4/PBMC_multiome_ATAC_IGO_11239_4_S4_L001_R3_001.fastq.gz"
+    "CellRangerArc.atacFastqName": "2740_DACE657_mKate2_mutiome_ATAC_IGO_12103_9",
+    "CellRangerArc.atacFastqFiles": [
+        "s3://dp-lab-data/collaborators/lowe/PDAC-GEMMs/DACE657_mKate2_mutiome_ATAC/FASTQ/2740_DACE657_mKate2_mutiome_ATAC_IGO_12103_9_S9_L001_I1_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/lowe/PDAC-GEMMs/DACE657_mKate2_mutiome_ATAC/FASTQ/2740_DACE657_mKate2_mutiome_ATAC_IGO_12103_9_S9_L001_R1_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/lowe/PDAC-GEMMs/DACE657_mKate2_mutiome_ATAC/FASTQ/2740_DACE657_mKate2_mutiome_ATAC_IGO_12103_9_S9_L001_R2_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/lowe/PDAC-GEMMs/DACE657_mKate2_mutiome_ATAC/FASTQ/2740_DACE657_mKate2_mutiome_ATAC_IGO_12103_9_S9_L001_R3_001.fastq.gz",
     ],
-    "Arc.reference": "https://cf.10xgenomics.com/supp/cell-arc/refdata-cellranger-arc-GRCh38-2020-A-2.0.0.tar.gz",
-    "Arc.dockerRegistry": "hisplan"
+    "CellRangerArc.reference": "https://cf.10xgenomics.com/supp/cell-arc/refdata-cellranger-arc-mm10-2020-A-2.0.0.tar.gz",
+    "CellRangerArc.dockerRegistry": "quay.io/hisplan"
 }
