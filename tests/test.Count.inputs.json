@@ -1,5 +1,5 @@
 {
-    "Count.sampleName": "PBMC_multiome",
+    "Count.runID": "PBMC_multiome",
     "Count.gexFastqName": "PBMC_multiome_IGO_11238_3",
     "Count.gexFastqFiles": [
         "s3://dp-lab-data/sc-seq/Multiome_11239/RNA/Sample_PBMC_multiome_IGO_11238_3/PBMC_multiome_IGO_11238_3_S3_L001_I1_001.fastq.gz",

@@ -5,7 +5,7 @@ import "modules/Count.wdl" as Count
 workflow Count {
 
     input {
-        String sampleName
+        String runID
         String gexFastqName
         String atacFastqName
         Array[File] gexFastqFiles
@@ -18,7 +18,7 @@ workflow Count {
 
     call Count.Count {
         input:
-            sampleName = sampleName,
+            runID = runID,
             gexFastqName = gexFastqName,
             atacFastqName = atacFastqName,
             gexFastqFiles = gexFastqFiles,

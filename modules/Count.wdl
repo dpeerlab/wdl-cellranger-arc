@@ -3,7 +3,7 @@ version 1.0
 task Count {
 
     input {
-        String sampleName
+        String runID
         String gexFastqName
         String atacFastqName
         Array[File] gexFastqFiles
@@ -20,9 +20,9 @@ task Count {
     Int cores = 32
     Int memoryGB = 256
 
-    # ~{sampleName} : the top-level output directory containing pipeline metadata
-    # ~{sampleName}/outs/ : contains the final pipeline output files.
-    String outBase = sampleName + "/outs"
+    # ~{runID} : the top-level output directory containing pipeline metadata
+    # ~{runID}/outs/ : contains the final pipeline output files.
+    String outBase = runID + "/outs"
 
     command <<<
         set -euo pipefail
@@ -53,7 +53,7 @@ task Count {
 
         # run the count pipeline
         cellranger-arc count \
-            --id=~{sampleName} \
+            --id=~{runID} \
             --reference=./reference/ \
             --libraries=./libraries.csv \
             --localcores=~{cores - 1} \
@@ -99,7 +99,7 @@ task Count {
 
         File cloupe = outBase + "/cloupe.cloupe"
 
-        File pipestanceMeta = sampleName + "/" + sampleName + ".mri.tgz"
+        File pipestanceMeta = runID + "/" + runID + ".mri.tgz"
     }
 
     runtime {
