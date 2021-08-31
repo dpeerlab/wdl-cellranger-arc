@@ -3,4 +3,4 @@
 java -jar ~/Applications/womtool.jar \
     validate \
     CellRangerArc.wdl \
-    --inputs ./configs/dev.inputs.json
+    --inputs ./configs/template.inputs.json
