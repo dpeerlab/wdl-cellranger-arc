@@ -15,9 +15,9 @@ You need two files for processing a V(D)J sample - one inputs file and one label
 
 ### Inputs
 
-Note that the prefix `CellRangerArc.` is omitted for brevity.
+Use one of the URLs below for the reference genome:
 
-Reference  | Value
+Type       | `CellRangerArc.reference`
 ---------- | ---------------------------------------------------------------------------------------------
 GRCh38     | `https://cf.10xgenomics.com/supp/cell-arc/refdata-cellranger-arc-GRCh38-2020-A-2.0.0.tar.gz`
 mm10       | `https://cf.10xgenomics.com/supp/cell-arc/refdata-cellranger-arc-mm10-2020-A-2.0.0.tar.gz`
