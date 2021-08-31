@@ -1,9 +1,0 @@
-{
-    "pipelineType": "CellRangerARC",
-    "project": "DEV/TEST",
-    "sample": "devtest",
-    "owner": "chunj",
-    "destination": "gs://dp-lab-test/cellranger-arc/cr-arc-results/",
-    "transfer": "-",
-    "comment": "DEV/TEST"
-}
