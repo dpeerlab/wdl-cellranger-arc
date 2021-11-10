@@ -1,0 +1,9 @@
+{
+    "pipelineType": "CellRangerARC",
+    "project": "tiny_arc",
+    "sample": "tiny_arc",
+    "owner": "chunj",
+    "destination": "s3://dp-lab-gwf-core/outputs/cr-arc-results/",
+    "transfer": "skip",
+    "comment": ""
+}

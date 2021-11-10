@@ -1,0 +1,21 @@
+{
+    "CellRangerArc.runID": "tiny_arc",
+    "CellRangerArc.gexFastqName": "tiny_arc_gex",
+    "CellRangerArc.gexFastqFiles": [
+        "s3://dp-lab-test/tiny/arc_testrun_files/fastqs/tiny_arc_gex_S1_L001_R1_001.fastq.gz",
+        "s3://dp-lab-test/tiny/arc_testrun_files/fastqs/tiny_arc_gex_S1_L001_R2_001.fastq.gz"
+    ],
+    "CellRangerArc.atacFastqName": "tiny_arc_atac",
+    "CellRangerArc.atacFastqFiles": [
+        "s3://dp-lab-test/tiny/arc_testrun_files/fastqs/tiny_arc_atac_S1_L001_I1_001.fastq.gz",
+        "s3://dp-lab-test/tiny/arc_testrun_files/fastqs/tiny_arc_atac_S1_L001_R1_001.fastq.gz",
+        "s3://dp-lab-test/tiny/arc_testrun_files/fastqs/tiny_arc_atac_S1_L001_R2_001.fastq.gz",
+        "s3://dp-lab-test/tiny/arc_testrun_files/fastqs/tiny_arc_atac_S1_L001_R3_001.fastq.gz",
+        "s3://dp-lab-test/tiny/arc_testrun_files/fastqs/tiny_arc_atac_S1_L002_I1_001.fastq.gz",
+        "s3://dp-lab-test/tiny/arc_testrun_files/fastqs/tiny_arc_atac_S1_L002_R1_001.fastq.gz",
+        "s3://dp-lab-test/tiny/arc_testrun_files/fastqs/tiny_arc_atac_S1_L002_R2_001.fastq.gz",
+        "s3://dp-lab-test/tiny/arc_testrun_files/fastqs/tiny_arc_atac_S1_L002_R3_001.fastq.gz"
+    ],
+    "CellRangerArc.reference": "https://dp-lab-test.s3.amazonaws.com/tiny/arc_testrun_files/refdata-arc-tiny.tar.gz",
+    "CellRangerArc.dockerRegistry": "quay.io/hisplan"
+}
