@@ -2,6 +2,10 @@
 
 WDLized Cell Ranger ARC Pipeline
 
+## License
+
+The code is available to everyone under the standard [MIT license](./LICENSE). However, the code internally uses 10x software for certain things, so please make sure that you read and agree to [10x End User Software License](https://www.10xgenomics.com/end-user-software-license-agreement).
+
 ## Setup
 
 The pipeline is a part of SCING (Single-Cell pIpeliNe Garden; pronounced as "sing" /siŋ/). For setup, please refer to [this page](https://github.com/hisplan/scing). All the instructions below is given under the assumption that you have already configured SCING in your environment.
