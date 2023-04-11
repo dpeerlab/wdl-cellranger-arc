@@ -14,7 +14,7 @@ task Count {
         String dockerRegistry
     }
 
-    String cellRangerVersion = "2.0.0"
+    String cellRangerVersion = "2.0.2"
     String dockerImage = dockerRegistry + "/cromwell-cellranger-arc:" + cellRangerVersion
     Float inputSize = size(gexFastqFiles, "GiB") + size(atacFastqFiles, "GiB") + 20
     Int cores = 32
