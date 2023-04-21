@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 wf_name="cellranger-arc"
-version="2.0.0"
+version="2.0.2"
 files="submit.sh CellRangerArc.deps.zip CellRangerArc.wdl CellRangerArc.options.aws.json configs/template.*.json"
 dest="$HOME/scing/bin"
 

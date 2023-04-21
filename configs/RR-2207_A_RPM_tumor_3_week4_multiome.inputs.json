@@ -1,0 +1,35 @@
+{
+    "CellRangerArc.runID": "RR-2207_A_RPM_tumor_3_week4_multiome",
+    "CellRangerArc.gexFastqName": "4769_RR-2207_A_RPM_tumor_3_week4_multiome_IGO_12437_CS_30",
+    "CellRangerArc.gexFastqFiles": [
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome/FASTQ/4769_RR-2207_A_RPM_tumor_3_week4_multiome_IGO_12437_CS_30_S17_L001_I1_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome/FASTQ/4769_RR-2207_A_RPM_tumor_3_week4_multiome_IGO_12437_CS_30_S17_L001_I2_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome/FASTQ/4769_RR-2207_A_RPM_tumor_3_week4_multiome_IGO_12437_CS_30_S17_L001_R1_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome/FASTQ/4769_RR-2207_A_RPM_tumor_3_week4_multiome_IGO_12437_CS_30_S17_L001_R2_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome/FASTQ/4769_RR-2207_A_RPM_tumor_3_week4_multiome_IGO_12437_CS_30_S17_L002_I1_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome/FASTQ/4769_RR-2207_A_RPM_tumor_3_week4_multiome_IGO_12437_CS_30_S17_L002_I2_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome/FASTQ/4769_RR-2207_A_RPM_tumor_3_week4_multiome_IGO_12437_CS_30_S17_L002_R1_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome/FASTQ/4769_RR-2207_A_RPM_tumor_3_week4_multiome_IGO_12437_CS_30_S17_L002_R2_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome/FASTQ/4769_RR-2207_A_RPM_tumor_3_week4_multiome_IGO_12437_CS_30_S17_L003_I1_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome/FASTQ/4769_RR-2207_A_RPM_tumor_3_week4_multiome_IGO_12437_CS_30_S17_L003_I2_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome/FASTQ/4769_RR-2207_A_RPM_tumor_3_week4_multiome_IGO_12437_CS_30_S17_L003_R1_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome/FASTQ/4769_RR-2207_A_RPM_tumor_3_week4_multiome_IGO_12437_CS_30_S17_L003_R2_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome/FASTQ/4769_RR-2207_A_RPM_tumor_3_week4_multiome_IGO_12437_CS_30_S17_L004_I1_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome/FASTQ/4769_RR-2207_A_RPM_tumor_3_week4_multiome_IGO_12437_CS_30_S17_L004_I2_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome/FASTQ/4769_RR-2207_A_RPM_tumor_3_week4_multiome_IGO_12437_CS_30_S17_L004_R1_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome/FASTQ/4769_RR-2207_A_RPM_tumor_3_week4_multiome_IGO_12437_CS_30_S17_L004_R2_001.fastq.gz"
+    ],
+    "CellRangerArc.atacFastqName": "4772_RR-2207_A_RPM_tumor_3_week4_multiome_mATAC_IGO_12437_CT_10",
+    "CellRangerArc.atacFastqFiles": [
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome_mATAC/FASTQ/4772_RR-2207_A_RPM_tumor_3_week4_multiome_mATAC_IGO_12437_CT_10_S10_L001_I1_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome_mATAC/FASTQ/4772_RR-2207_A_RPM_tumor_3_week4_multiome_mATAC_IGO_12437_CT_10_S10_L001_R1_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome_mATAC/FASTQ/4772_RR-2207_A_RPM_tumor_3_week4_multiome_mATAC_IGO_12437_CT_10_S10_L001_R2_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome_mATAC/FASTQ/4772_RR-2207_A_RPM_tumor_3_week4_multiome_mATAC_IGO_12437_CT_10_S10_L001_R3_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome_mATAC/FASTQ/4772_RR-2207_A_RPM_tumor_3_week4_multiome_mATAC_IGO_12437_CT_10_S10_L002_I1_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome_mATAC/FASTQ/4772_RR-2207_A_RPM_tumor_3_week4_multiome_mATAC_IGO_12437_CT_10_S10_L002_R1_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome_mATAC/FASTQ/4772_RR-2207_A_RPM_tumor_3_week4_multiome_mATAC_IGO_12437_CT_10_S10_L002_R2_001.fastq.gz",
+        "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome_mATAC/FASTQ/4772_RR-2207_A_RPM_tumor_3_week4_multiome_mATAC_IGO_12437_CT_10_S10_L002_R3_001.fastq.gz"
+    ],
+    "CellRangerArc.reference": "https://dp-lab-data.s3.amazonaws.com/collaborators/sawyers/RpmModelMultiomics/RR-1546_RPM10week_1_section1_test_multiome/transgene/refdata-cellranger-arc/RPM_model_multiomics-GRCm38-transgenes-arc.tar.gz",
+    "CellRangerArc.dockerRegistry": "docker.io/sailmskcc"
+}

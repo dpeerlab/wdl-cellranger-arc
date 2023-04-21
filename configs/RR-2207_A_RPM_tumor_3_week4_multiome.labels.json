@@ -1,0 +1,9 @@
+{
+    "pipelineType": "CellRangerARC",
+    "project": "RPM model multiomics",
+    "sample": "RR-2207_A_RPM_tumor_3_week4_multiome",
+    "owner": "masilioi",
+    "destination": "s3://dp-lab-data/collaborators/sawyers/RpmModelMultiomics/RR-2207_A_RPM_tumor_3_week4_multiome/cr-arc-results",
+    "transfer": "-",
+    "comment": "masilioi"
+}
